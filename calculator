@@ -1,1 +1,48 @@
+import java.util.*;
 
+public class Calculator
+{
+	public static void main(String [] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		double a = 0;
+		double b = 0;
+		char operator;
+		double c = 0;
+		
+		System.out.print("Enter two numbers: ");
+		a = keyboard.nextDouble();
+		b = keyboard.nextDouble();
+		
+		System.out.print("Enter an operator: ");
+		operator = keyboard.next().charAt(0);
+		
+		switch(operator)
+		{
+			case '+':
+				c = a + b;
+				break;
+			case '-':
+				c = a - b;
+				break;
+			case '*':
+				c = a * b;
+				break;
+			case '/':
+				c = a / b;
+				break;
+			case '^':
+				c = Math.pow(a, b);
+				break;
+				
+			default:
+				System.out.println("Sorry, I don't know how to do that yet");
+				return;
+		}
+		
+		System.out.print(a + " " + operator +  " " + b + " = " + c);
+		
+	}
+	
+}
